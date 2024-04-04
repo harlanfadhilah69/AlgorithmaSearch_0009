@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
 
-int arr[];
+int arr[20];
 int n;
 int i;
 
@@ -9,7 +9,7 @@ void input()
 {
 	while (true)
 	{
-		cout << "Enter the number of elements in the array: ";
+		cout << "Enter the number of elements in the array : ";
 		cin >> n;
 		if ((n > 0) && (n <= 20))
 			break;
@@ -17,12 +17,13 @@ void input()
 			cout << "\nArray should have minimum 1 and maximum 20 elements. \n\n";
 	}
 
-	cout << "\n----------------------\n";
-	cout << " Enter array elements \n";
-	cout << "----------------------\n";
+
+	cout << "\n---------------------\n";
+	cout << "Enter array elements\n";
+	cout << "---------------------\n";
 	for (i = 0; i < n; i++)
 	{
-		cout << "<" << (i + 1) << ">";
+		cout << "<" << (i + 1) << "> ";
 		cin >> arr[i];
 	}
 }
@@ -35,7 +36,8 @@ void LinearSearch()
 
 	do
 	{
-		cout << "\nEnter the element you want to search: ";
+
+		cout << "\nEnter the element you want to search : ";
 		cin >> item;
 
 		ctr = 0;
@@ -50,11 +52,12 @@ void LinearSearch()
 			}
 			i++;
 		}
+
 		if (i == n)
 			cout << "\n" << item << " not found in the array\n";
-		cout << "\nNumber of comparisons: " << ctr << endl;
+		cout << "\nNumber of comparisons : " << ctr << endl;
 
-		cout << "\nContinue search (y/n): ";
+		cout << "\nContinue search (y/n) : ";
 		cin >> ch;
 
 	} while ((ch == 'y') || (ch == 'Y'));
@@ -62,7 +65,7 @@ void LinearSearch()
 
 void display()
 {
-	cout << "Array elements are: ";
+	cout << "Array elements are : ";
 	for (i = 0; i < n; i++)
 		cout << arr[i] << " ";
 	cout << endl;
